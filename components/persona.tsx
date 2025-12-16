@@ -2,6 +2,8 @@
 
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
+import { MAIL_TO_LINK, openMailClient } from "@/lib/utils";
+
 export default function Persona() {
   return (
     <section className="py-20 px-4 md:px-6 lg:px-8 bg-card/50">
@@ -88,7 +90,8 @@ export default function Persona() {
                 <Twitter size={20} />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href={MAIL_TO_LINK}
+                onClick={() => openMailClient()}
                 className="p-3 bg-card hover:bg-primary/10 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-foreground hover:text-primary"
                 aria-label="Email"
               >

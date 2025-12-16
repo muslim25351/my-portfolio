@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { MAIL_TO_LINK, openMailClient } from "@/lib/utils";
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
@@ -41,12 +43,13 @@ export default function Hero() {
                   />
                 </svg>
               </Link>
-              <Link
-                href="#contact"
+              <a
+                href={MAIL_TO_LINK}
+                onClick={() => openMailClient()}
                 className="inline-flex items-center px-6 py-3 border border-border text-foreground rounded-lg hover:bg-card transition-colors font-medium"
               >
                 Get in Touch
-              </Link>
+              </a>
             </div>
 
             <div className="flex flex-wrap gap-4 pt-8">

@@ -7,7 +7,7 @@ const projects = [
     id: 1,
     title: "hospital managment system",
     description:
-      "A full-stack managment solution with user authentication, role-based access control, and payment integration.",
+      "A backend project with user authentication, role-based access control, and payment integration.",
     tags: [
       "Authentication",
       "Express",

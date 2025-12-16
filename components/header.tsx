@@ -1,10 +1,12 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useState } from "react"
+import Link from "next/link";
+import { useState } from "react";
+
+import { MAIL_TO_LINK, openMailClient } from "@/lib/utils";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
@@ -17,20 +19,43 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#about" className="text-sm text-foreground/70 hover:text-foreground transition-colors">
+            <Link
+              href="#about"
+              className="text-sm text-foreground/70 hover:text-foreground transition-colors"
+            >
               About
             </Link>
-            <Link href="#projects" className="text-sm text-foreground/70 hover:text-foreground transition-colors">
+            <Link
+              href="#projects"
+              className="text-sm text-foreground/70 hover:text-foreground transition-colors"
+            >
               Projects
             </Link>
-            <Link href="#contact" className="text-sm text-foreground/70 hover:text-foreground transition-colors">
+            <a
+              href={MAIL_TO_LINK}
+              onClick={() => openMailClient()}
+              className="text-sm text-foreground/70 hover:text-foreground transition-colors"
+            >
               Contact
-            </Link>
+            </a>
           </div>
 
-          <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          <button
+            className="md:hidden text-foreground"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
@@ -49,15 +74,16 @@ export default function Header() {
             >
               Projects
             </Link>
-            <Link
-              href="#contact"
+            <a
+              href={MAIL_TO_LINK}
+              onClick={() => openMailClient()}
               className="block text-sm text-foreground/70 hover:text-foreground transition-colors py-2"
             >
               Contact
-            </Link>
+            </a>
           </div>
         )}
       </nav>
     </header>
-  )
+  );
 }
