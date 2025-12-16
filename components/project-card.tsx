@@ -1,21 +1,21 @@
-"use client"
-import Link from "next/link"
-import { useState } from "react"
+"use client";
+import Link from "next/link";
+import { useState } from "react";
 
 interface ProjectCardProps {
   project: {
-    id: number
-    title: string
-    description: string
-    tags: string[]
-    image: string
-    github: string
-    deployment: string
-  }
+    id: number;
+    title: string;
+    description: string;
+    tags: string[];
+    image: string;
+    github: string;
+    deployment: string;
+  };
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
@@ -30,7 +30,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div
-          className={`absolute inset-0 bg-background/40 backdrop-blur-sm transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 bg-background/40 backdrop-blur-sm transition-opacity duration-300 ${
+            isHovered ? "opacity-100" : "opacity-0"
+          }`}
         />
       </div>
 
@@ -39,7 +41,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
             {project.title}
           </h3>
-          <p className="text-sm sm:text-base text-foreground/70 line-clamp-2">{project.description}</p>
+          <p className="text-sm sm:text-base text-foreground/70 line-clamp-2">
+            {project.description}
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -71,7 +75,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-all duration-300"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -84,5 +93,5 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

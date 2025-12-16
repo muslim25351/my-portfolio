@@ -1,65 +1,89 @@
-"use client"
+"use client";
 
-import ProjectCard from "./project-card"
+import ProjectCard from "./project-card";
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with product catalog, shopping cart, and secure checkout flow.",
-    tags: ["Next.js", "React", "TypeScript", "Stripe", "Database"],
-    image: "/ecommerce-platform.jpg",
-    github: "https://github.com/yourusername/ecommerce-platform",
+    title: "hospital managment system",
+    description:
+      "A full-stack managment solution with user authentication, role-based access control, and payment integration.",
+    tags: [
+      "Authentication",
+      "Express",
+      "TypeScript",
+      "mongodb",
+      "jsonwebToken",
+    ],
+    image: "/hospital-management-system-sm-01.png",
+    github: "https://github.com/muslim25351/hospital-management-system",
     deployment: "https://ecommerce-demo.vercel.app",
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Collaborative task management application with real-time updates and team collaboration features.",
-    tags: ["React", "Firebase", "Tailwind", "WebSockets"],
-    image: "/task-management-app.jpg",
-    github: "https://github.com/yourusername/task-manager",
-    deployment: "https://taskapp-demo.vercel.app",
+    title: "Real-state sale and rental webapplication",
+    description:
+      "A web application for listing, buying, selling, and renting properties with search and filter functionality..",
+    tags: [
+      "React",
+      "Redux",
+      "mongodb",
+      "Tailwind",
+      "jsonwebToken",
+      "cloudinary",
+    ],
+    image: "/real Estate project.jpg",
+    github: "https://github.com/muslim25351/Mern-Estate-",
+    deployment: "https://mern-estate-cklt.onrender.com/",
   },
   {
     id: 3,
-    title: "AI Content Generator",
+    title: "Git-hub clone project",
     description:
-      "Intelligent content generation tool powered by AI, helping creators produce quality content efficiently.",
-    tags: ["Next.js", "OpenAI", "TypeScript", "Vercel AI SDK"],
-    image: "/ai-content-generator.jpg",
+      "A GitHub-like platform that allows users to create, manage, and clone repositories.Built to demonstrate create Repo, fork repo,star repo and others.",
+    tags: ["Express js", "authentication", "java script", "jsonwebToken"],
+    image: "/github clone.png",
     github: "https://github.com/yourusername/ai-generator",
     deployment: "https://ai-generator-demo.vercel.app",
   },
   {
     id: 4,
-    title: "Analytics Dashboard",
+    title: "chat application",
     description:
-      "Real-time analytics dashboard with interactive charts, data visualization, and comprehensive reporting.",
-    tags: ["React", "Chart.js", "Express", "PostgreSQL"],
-    image: "/analytics-dashboard.png",
-    github: "https://github.com/yourusername/analytics-dashboard",
+      "A real-time chat application that enables users to send and receive messages instantly.It supports user authentication and a clean, responsive messaging interface.",
+    tags: [
+      "React",
+      "Zustand",
+      "Express",
+      "mongodb",
+      "Socket.io",
+      "authentication",
+    ],
+    image: "/chat.jpg",
+    github: "https://github.com/muslim25351/chat-app",
     deployment: "https://analytics-demo.vercel.app",
   },
   {
     id: 5,
-    title: "Social Media App",
-    description: "Social network platform with user profiles, post creation, real-time notifications, and messaging.",
-    tags: ["Next.js", "Supabase", "Real-time API", "Authentication"],
-    image: "/social-media-app.jpg",
-    github: "https://github.com/yourusername/social-app",
+    title: "Tech-event web application",
+    description:
+      "An application for organizing and managing technology events, schedules, and registrations.",
+    tags: ["Next.js", "mongodb", "Real-time API", "Authentication"],
+    image: "/tech-.PNG",
+    github: "https://github.com/muslim25351/tech-event",
     deployment: "https://social-demo.vercel.app",
   },
   {
     id: 6,
     title: "Design System",
-    description: "Comprehensive design system and component library for building consistent user interfaces.",
+    description:
+      "Comprehensive design system and component library for building consistent user interfaces.",
     tags: ["React", "Storybook", "TypeScript", "Tailwind CSS"],
     image: "/design-system-components.jpg",
     github: "https://github.com/yourusername/design-system",
     deployment: "https://design-system.vercel.app",
   },
-]
+];
 
 export default function ProjectGrid() {
   return (
@@ -67,9 +91,12 @@ export default function ProjectGrid() {
       <div className="mx-auto max-w-6xl">
         <div className="space-y-12">
           <div className="space-y-4">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Featured Projects</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+              Featured Projects
+            </h2>
             <p className="text-lg text-foreground/60 max-w-2xl">
-              A selection of recent work showcasing my skills in modern web development, design, and problem-solving.
+              A selection of recent work showcasing my skills in modern web
+              development, design, and problem-solving.
             </p>
           </div>
 
@@ -81,5 +108,5 @@ export default function ProjectGrid() {
         </div>
       </div>
     </section>
-  )
+  );
 }
