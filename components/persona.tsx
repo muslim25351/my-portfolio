@@ -72,7 +72,7 @@ export default function Persona() {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/abuzer-jemal-50a68b356/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-card hover:bg-primary/10 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-foreground hover:text-primary"
@@ -89,14 +89,16 @@ export default function Persona() {
               >
                 <Twitter size={20} />
               </a>
-              <a
-                href={MAIL_TO_LINK}
-                onClick={() => openMailClient()}
+              <button
+                type="button"
                 className="p-3 bg-card hover:bg-primary/10 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-foreground hover:text-primary"
-                aria-label="Email"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = "mailto:abuzerj12@gmail.com";
+                }}
               >
                 <Mail size={20} />
-              </a>
+              </button>
             </div>
           </div>
 

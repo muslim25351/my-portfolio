@@ -10,6 +10,7 @@ export const MAIL_TO_LINK = `mailto:${CONTACT_EMAIL}`;
 
 export function openMailClient(mailto: string = MAIL_TO_LINK) {
   if (typeof window !== "undefined") {
+    console.log("Opening mail client...");
     window.location.href = mailto;
   }
 

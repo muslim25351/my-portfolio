@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { MAIL_TO_LINK, openMailClient } from "@/lib/utils";
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -31,13 +29,12 @@ export default function Header() {
             >
               Projects
             </Link>
-            <a
-              href={MAIL_TO_LINK}
-              onClick={() => openMailClient()}
+            <Link
+              href="#footer"
               className="text-sm text-foreground/70 hover:text-foreground transition-colors"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           <button
@@ -74,13 +71,12 @@ export default function Header() {
             >
               Projects
             </Link>
-            <a
-              href={MAIL_TO_LINK}
-              onClick={() => openMailClient()}
+            <Link
+              href="#footer"
               className="block text-sm text-foreground/70 hover:text-foreground transition-colors py-2"
             >
               Contact
-            </a>
+            </Link>
           </div>
         )}
       </nav>
