@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Send } from "lucide-react";
 
 import { MAIL_TO_LINK, openMailClient } from "@/lib/utils";
 
@@ -88,6 +88,15 @@ export default function Persona() {
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
+              </a>
+              <a
+                href="https://t.me/abuzerj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-card hover:bg-primary/10 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-foreground hover:text-primary"
+                aria-label="Telegram"
+              >
+                <Send size={20} />
               </a>
               <button
                 type="button"
