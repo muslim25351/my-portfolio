@@ -22,7 +22,7 @@ export default function Persona() {
             </div>
 
             <p className="text-foreground/80 text-base leading-relaxed">
-              I’m a focused developer with 2+ years of experience building
+              I’m a focused developer with 3+ years of experience building
               scalable and complex backend systems and APIs, while also
               developing clean, modern frontends. I specialize in solving
               challenging problems and delivering efficient, well-structured
